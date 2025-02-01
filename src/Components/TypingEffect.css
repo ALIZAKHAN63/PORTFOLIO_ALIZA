@@ -1,0 +1,25 @@
+.typing-container {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cursor {
+    display: inline-block;
+    width: 8px;
+    background-color: black;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  

@@ -1,0 +1,79 @@
+/* SkillsSection.css */
+
+.SkillsSection {
+    background-color: black;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.skillheading {
+    color: azure;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
+    animation: fadeInDown 1s ease-out;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.icons-container img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icons-container img:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .skillheading {
+        font-size: 2rem;
+    }
+
+    .icons-container img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .skillheading {
+        font-size: 1.8rem;
+    }
+
+    .icons-container {
+        gap: 20px;
+    }
+
+    .icons-container img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

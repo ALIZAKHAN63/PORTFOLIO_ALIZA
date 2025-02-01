@@ -1,0 +1,140 @@
+/* Experience.css */
+
+.experience-section {
+  background-color:  rgb(248, 225, 191);;
+  padding: 60px 20px;
+}
+
+.experience-heading {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.4;
+  animation: fadeInDown 1s ease-out;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 5px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: drawLine 1.5s ease-out;
+}
+
+.timeline-item {
+  padding: 20px;
+  position: relative;
+  width: 45%;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.timeline-item.left {
+  right: 5%;
+  text-align: left;
+  border: 0.5px solid #333;
+  flex-direction: row-reverse;
+  animation-delay: 0.3s;
+}
+
+.timeline-item.right {
+  left: 55%;
+  text-align: left;
+  border: 0.5px solid #333;
+  animation-delay: 0.6s;
+}
+
+.timeline-item h2, .timeline-item h3, .timeline-item p {
+  margin: 5px 0;
+}
+
+.duration {
+  font-style: italic;
+  color: #666;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 90%;
+    left: 5% !important;
+    right: 5% !important;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item.left, .timeline-item.right {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .experience-heading {
+    font-size: 1.5em;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    right: 0 !important;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes drawLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}

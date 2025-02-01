@@ -1,0 +1,94 @@
+/* Projector.css */
+
+.Projector {
+  background-color: rgb(248, 225, 191);
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Projectheading {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  animation: fadeInDown 1s ease-out;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.pic1, .pic2, .pic3 {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a:hover .pic1, a:hover .pic2, a:hover .pic3 {
+  cursor: pointer;
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .pic1, .pic2, .pic3 {
+      width: 250px;
+      height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Projectheading {
+      font-size: 2rem;
+  }
+
+  .pic1, .pic2, .pic3 {
+      width: 200px;
+      height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Projectheading {
+      font-size: 1.8rem;
+  }
+
+  .pic1, .pic2, .pic3 {
+      width: 150px;
+      height: 150px;
+  }
+
+  .image-container {
+      gap: 20px;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
