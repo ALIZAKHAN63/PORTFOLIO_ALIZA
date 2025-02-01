@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./TypingEffect.css";
 
 const TypingEffect = () => {
-  const texts = ["Front-End Developer", "Dev Team Head BUDS", "Meta-Certified Developer", "Bahria University'26"];
+  const texts = ["Front-End Developer", "Dev Team Head 'BUDS", "Meta-Certified Developer", "Bahria University'26"];
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");

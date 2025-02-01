@@ -1,6 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400; 
+}
 body {
   margin: 0;
   padding: 0;
+  
 }
 
 .wrapper {
@@ -10,32 +18,29 @@ body {
 
 .Head {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: space-between; /* Add space between items */
+  flex-direction: column; 
+  justify-content: space-between; 
   align-items: center;
-  font-weight: 900; /* Makes text more bold */
-  font-size: 2.5rem; /* Adjust size as needed */
+  font-weight: 900; 
+  font-size: 2.5rem; 
   text-align: center;
 }
 .Name {
   display: flex;
  margin-bottom: 10px;
  margin-top: 2px;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: space-between; /* Add space between items */
+  flex-direction: column; 
+  justify-content: space-between; 
   align-items: center;
   color: black !important;
   font-size: 1.5rem;
 }
 .laptop {
   margin-top: 150px;
-  margin-bottom: 10px; /* Minimal space between icon and text */
-  width: 100px; /* Adjust the size of the icon */
-  height: 150px; /* Maintain aspect ratio */
+  margin-bottom: 10px; 
+  width: 100px; 
+  height: 150px; 
 }
-
-
-
 
 .github-corner {
   position: absolute;
@@ -46,12 +51,10 @@ body {
   border: 0;
   transform: scale(-1, 1);
 }
-
 .github-corner svg {
   width: 110px;
   height: 110px;
 }
-
 .skill {
   z-index: 1000;
   color: aqua;

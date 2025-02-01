@@ -1,7 +1,7 @@
 .about-wrapper {
-  max-width: 900px; /* Increased width to make it rectangular */
+  max-width: 900px; 
   margin: 40px auto;
-  border-radius: 12px; /* Slightly rounded corners */
+  border-radius: 12px; 
   overflow: hidden;
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -10,7 +10,7 @@
 }
 
 .about-wrapper:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
+  transform: translateY(-5px); 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -32,7 +32,7 @@
 }
 
 .dot:hover {
-  opacity: 0.8; /* Slight fade on hover for interactivity */
+  opacity: 0.8; 
 }
 
 .red {
