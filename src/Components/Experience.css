@@ -97,11 +97,11 @@ ul {
 
 @media screen and (max-width: 480px) {
   .experience-heading {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .timeline-item {
-    width: 100%;
+    width: 85%;
     left: 0 !important;
     right: 0 !important;
   }
