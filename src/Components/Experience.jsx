@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 import './Experience.css';
 
 const experiences = [
@@ -25,13 +26,22 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.5, // Trigger when 50% of the element is in view
+  });
+
   return (
-    <div className="experience-section">
-      <h1 className="experience-heading">EXPERIENCE</h1>
+    <div ref={ref} className="experience-section">
+      <h1 className={`experience-heading ${inView ? 'fadeInDown' : ''}`}>EXPERIENCE</h1>
       <div className="timeline">
-        <div className="timeline-line"></div>
+        <div className={`timeline-line ${inView ? 'drawLine' : ''}`}></div>
         {experiences.map((exp, index) => (
-          <div key={index} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
+          <div
+            key={index}
+            className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'} ${inView ? 'fadeInUp' : ''}`}
+            style={{ animationDelay: `${index * 0.3}s` }}
+          >
             <div className="content">
               <h2>{exp.title}</h2>
               <h3>{exp.role}</h3>
